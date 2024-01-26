@@ -33,6 +33,10 @@ void traverse() {
 	cout << "\n\n";
 }
 
+void last_node() {
+	// 해보기
+}
+
 void insert_test(){
   cout << "****** insert_test *****\n";
   insert(0, 10); // 10(address=1)
