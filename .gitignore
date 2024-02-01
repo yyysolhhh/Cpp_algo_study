@@ -4,6 +4,7 @@
 
 .vscode
 *.txt
+자료/
 # Created by https://www.toptal.com/developers/gitignore/api/c,c++,vim,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,vim,macos
 
