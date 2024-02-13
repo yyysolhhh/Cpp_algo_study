@@ -1,7 +1,10 @@
+# Stack
+
 FILO(First In Last Out)
 스택, 큐, 덱 - Restricted Structure
 
 - 스택의 성질
+
   1. 원소의 추가가 O(1)
   2. 원소의 제거가 O(1)
   3. 제일 상단의 원소 확인이 O(1)
@@ -17,4 +20,3 @@ FILO(First In Last Out)
   cout << S.size();
   ```
   스택이 비어있을때 pop, top 호출하면 runtime error
-  

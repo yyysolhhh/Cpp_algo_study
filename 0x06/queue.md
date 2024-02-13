@@ -1,3 +1,5 @@
+# Queue
+
 FIFO(First in First Out)
 
 - 큐의 성질
