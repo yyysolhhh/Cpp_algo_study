@@ -17,7 +17,6 @@ int main(void) {
       cin >> board[x][y];
     }
   }
-  queue<pair<int, int>> Q;
   int num_pic = 0;
   int max_area = 0;
   for (int x = 0; x < n; x++) {
@@ -25,11 +24,13 @@ int main(void) {
       if (board[x][y] != 1 || visited[x][y]) {
         continue;
       }
+      queue<pair<int, int>> Q;
       visited[x][y] = 1;
       Q.push({x, y});
       num_pic++;
-      int area = 1;
+      int area = 0;
       while (!Q.empty()) {
+        area++;
         pair<int, int> cur = Q.front();
         Q.pop();
         for (int dir = 0; dir < 4; dir++) {
@@ -43,12 +44,12 @@ int main(void) {
           }
           visited[nx][ny] = 1;
           Q.push({nx, ny});
-          area++;
         }
       }
-      if (area > max_area) {
-        max_area = area;
-      }
+      // if (area > max_area) {
+      //   max_area = area;
+      // }
+      max_area = max(max_area, area);
     }
   }
   cout << num_pic << '\n' << max_area;
