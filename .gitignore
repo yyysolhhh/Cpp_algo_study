@@ -2,7 +2,8 @@
 !*.*
 !*/
 
-.vscode
+.vscode/
+.fleet/
 *.txt
 자료/
 # Created by https://www.toptal.com/developers/gitignore/api/c,c++,vim,macos
