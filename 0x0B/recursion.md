@@ -147,16 +147,16 @@ https://www.mathsisfun.com/games/towerofhanoi.html
         원판 n개를 a번 기둥에서 b번 기둥으로 옮기는 방법을 출력하는 함수
 
     2. base condition  
-    n = 1일 때 cout << a << ' ' << b << '\n';
+        n = 1일 때 cout << a << ' ' << b << '\n';
     
     3. 재귀 식  
-    n-1개의 원판을 기둥a에서 기둥6-a-b로 옮긴다.
-    func(a, 6-a-b, n-1);  
-    n번 원판을 기둥a에서 기둥b로 옮긴다.
-    cout << a << ' ' << b << '\n';  
-    n-1개의 원판을 기둥6-a-b에서 기둥b로 옮긴다.
-    func(6-a-b, b, n-1);  
-    (6-a-b는 a, b가 기둥 1, 2, 3 중 하나일 때 비어있는 기둥의 번호)
+        n-1개의 원판을 기둥a에서 기둥6-a-b로 옮긴다.
+        func(a, 6-a-b, n-1);  
+        n번 원판을 기둥a에서 기둥b로 옮긴다.
+        cout << a << ' ' << b << '\n';  
+        n-1개의 원판을 기둥6-a-b에서 기둥b로 옮긴다.
+        func(6-a-b, b, n-1);  
+        (6-a-b는 a, b가 기둥 1, 2, 3 중 하나일 때 비어있는 기둥의 번호)
 
     - 총 옮긴 횟수  
     원판 k개를 옮기기 위해 A번 이동 필요  
@@ -168,3 +168,16 @@ https://www.mathsisfun.com/games/towerofhanoi.html
 
 ### 0x03 연습 문제 3 - Z
 - BOJ 1074: Z
+
+    1. 함수의 정의  
+    int func(int n, int r, int c)  
+    $2^n \times 2^n$ 배열에서 (r, c)를 방문하는 순서를 반환하는 함수
+
+    2. base condition  
+        n = 0일 때 return 0;
+
+    3. 재귀 식  
+        (r, c)가 1번 사각형일 때 return func(n - 1, r, c);  
+        (r, c)가 2번 사각형일 때 return  half * half + func(n - 1, r, c - half);  
+        (r, c)가 3번 사각형일 때 return  2 * half * half + func(n - 1, r - half, c);  
+        (r, c)가 4번 사각형일 때 return 3 * half * half + func(n - 1, r - half, c - half);  
