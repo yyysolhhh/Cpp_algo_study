@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// 1
+// 내 풀이
 int N, M;
 vector<int> perm;
 void print() {
@@ -29,7 +29,7 @@ int main(void) {
   return 0;
 }
 
-// 2
+// 강의 풀이
 int n, m;
 int arr[10];
 bool isused[10];
